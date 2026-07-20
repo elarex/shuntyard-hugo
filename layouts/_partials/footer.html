@@ -6,26 +6,40 @@
         <p>{{ site.Params.tagline }}</p>
       </div>
 
-      <div class="footer-business">
-        {{- with site.Params.business -}}
+      <div class="footer-contact">
+        {{- with site.Params.emails -}}
           <p>
-            {{ with .legalName }}{{ . }}<br>{{ end }}
-            {{ with .abn }}ABN {{ . }}<br>{{ end }}
-            {{ with .location }}{{ . }}{{ end }}
+            {{ with .sales }}New projects: <a href="mailto:{{ . }}">{{ . }}</a><br>{{ end }}
+            {{ with .general }}General: <a href="mailto:{{ . }}">{{ . }}</a><br>{{ end }}
+            {{ with .support }}Support: <a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
           </p>
         {{- end -}}
-        <p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
       </div>
 
-      {{- with site.Params.socials -}}
-        <nav class="footer-socials" aria-label="Social links">
-          <ul>
-            {{- range . -}}
-              <li><a href="{{ .url }}" rel="me noopener" target="_blank">{{ .name }}</a></li>
-            {{- end -}}
-          </ul>
-        </nav>
-      {{- end -}}
+      <ul class="footer-connect">
+        {{- with site.Params.phone -}}
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:{{ . | replaceRE `[^0-9+]` `` }}">{{ . }}</a>
+          </li>
+        {{- end -}}
+        {{- range site.Params.locations -}}
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>
+              {{ with .street }}{{ . }}<br>{{ end }}
+              {{ .city }}{{ with .region }} {{ . }}{{ end }}{{ with .postcode }} {{ . }}{{ end }}<br>
+              {{ .country }}
+            </span>
+          </li>
+        {{- end -}}
+        {{- range site.Params.socials -}}
+          <li>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            <a href="{{ .url }}" rel="me noopener" target="_blank">{{ .name }}</a>
+          </li>
+        {{- end -}}
+      </ul>
     </div>
 
     <div class="footer-legal">

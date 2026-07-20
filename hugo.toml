@@ -1,6 +1,6 @@
 baseURL = 'https://shuntyard.com/'
 locale = 'en-au'
-title = 'Shuntyard'
+title = 'Shuntyard Technologies'
 
 # Pico is fairly compact; keep summaries readable.
 summaryLength = 30
@@ -10,15 +10,27 @@ disableKinds = ['taxonomy', 'term']
 [taxonomies]
 
 [params]
-  description = 'Shuntyard is a software development company that designs, builds, and ships reliable software.'
-  tagline = 'Software built to last.'
-  email = 'hello@shuntyard.com'
+  description = 'Shuntyard Technologies builds business systems that make business sense, specialising in web application development and AI.'
+  tagline = 'Business Systems. Business Sense.'
+  phone = '(+61) 402 005 372'
 
   # Business details shown in the footer.
   [params.business]
-    legalName = 'Shuntyard Pty Ltd'
-    abn = '00 000 000 000'
-    location = 'Australia'
+    legalName = 'Shuntyard Technologies'
+
+  # Office locations.
+  [[params.locations]]
+    street = '265 Wharf Road'
+    city = 'Newcastle'
+    region = 'NSW'
+    postcode = '2300'
+    country = 'Australia'
+
+  # Contact email addresses.
+  [params.emails]
+    general = 'info@shuntyard.com'
+    sales = 'sales@shuntyard.com'
+    support = 'support@shuntyard.com'
 
   # Social links. Add more entries as they come online.
   [[params.socials]]

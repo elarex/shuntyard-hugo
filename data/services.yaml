@@ -1,30 +1,23 @@
 # Each entry becomes a card on the Services page.
-- title: Custom Software Development
+# `icon` is a path under assets/.
+- title: Application Development
+  icon: images/services/web-app.png
   summary: >-
-    End-to-end design and delivery of web and backend systems tailored to how
-    your business actually works — not an off-the-shelf compromise.
+    We focus on addressing your business needs. Supported by a broad technology
+    stack that enhances new and existing projects, we've got you covered with the
+    best comprehensive solutions.
 
-- title: Cloud & Platform Engineering
+- title: Artificial Intelligence
+  icon: images/services/ai.png
   summary: >-
-    Infrastructure as code, CI/CD pipelines, and observability so your software
-    ships safely and runs reliably at scale.
+    Practical AI that earns its place in your product — from integrating large
+    language models and intelligent automation to surfacing insight from your
+    data. We help you adopt AI where it adds real value, not hype.
 
-- title: API & Systems Integration
+- title: Expert Assistance
+  icon: images/services/assistance.png
   summary: >-
-    Connecting the tools, data, and third-party services your business depends
-    on into one coherent, well-documented system.
-
-- title: Legacy Modernisation
-  summary: >-
-    Untangling and incrementally rebuilding ageing systems without a risky
-    big-bang rewrite — keeping the lights on the whole way.
-
-- title: Technical Consulting & Architecture
-  summary: >-
-    Pragmatic architecture reviews, technology selection, and hands-on guidance
-    to help your team make sound decisions early.
-
-- title: Ongoing Support & Maintenance
-  summary: >-
-    Long-term partnership to keep software secure, up to date, and evolving with
-    your business well after launch.
+    If you simply need more hands on deck in the short term, or a dynamic team to
+    assist on a project, we can help. We cover every aspect of your system in
+    order to effectively assist your team. If you just want some input on an
+    existing plan, we are happy to offer our expert development advice.

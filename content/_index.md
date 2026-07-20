@@ -1,9 +1,11 @@
 ---
-title: "Shuntyard"
-tagline: "Software built to last."
+title: "Shuntyard Technologies"
+tagline: "Business Systems. Business Sense."
 ---
 
-We're a software development company that partners with businesses to design,
-build, and ship software that holds up in the real world. From first idea to
-long-term maintenance, we sweat the details so your product stays reliable as it
-grows.
+Since 2011, we've been building web applications that businesses rely on every
+day. That's well over a decade of turning complex, real-world requirements into
+software that's reliable, maintainable, and genuinely good to use. We've seen
+what works and what doesn't, and we bring that hard-won expertise to every
+project we take on. Whatever you're planning to build, you can count on us to
+build it right.

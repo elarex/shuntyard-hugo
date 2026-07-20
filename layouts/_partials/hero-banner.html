@@ -1,0 +1,18 @@
+{{- /* Decorative banner strip for interior pages, with optional overlaid
+       title and lead. The image fades in from white on the left so overlaid
+       text stays legible. Params: image (path under assets/), title, lead. */ -}}
+{{- $title := .title -}}
+{{- $lead := .lead -}}
+{{- with resources.Get .image -}}
+  {{- $bg := (.Resize "2000x webp q82").RelPermalink -}}
+  {{- /* Solid white over the left half, softly revealing the image on the right. */ -}}
+  {{- $style := printf "background-image: linear-gradient(to right, #fff 0%%, #fff 45%%, rgba(255,255,255,0) 68%%), url('%s');" $bg -}}
+  <section class="hero-banner hero-banner--sub" style="{{ $style | safeCSS }}">
+    {{- with $title -}}
+      <div class="hero-banner-inner">
+        <h1>{{ . }}</h1>
+        {{ with $lead }}<p class="tagline">{{ . }}</p>{{ end }}
+      </div>
+    {{- end -}}
+  </section>
+{{- end -}}

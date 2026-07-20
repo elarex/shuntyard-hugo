@@ -1,15 +1,51 @@
-# Grouped technologies shown on the Technology page.
-- category: Languages
-  items: [Go, TypeScript, Python, SQL]
+# Technologies we prefer to work with, shown on the Technology page.
+# `logo` is a path under assets/. `url` links to the official site.
+- name: Ruby on Rails
+  logo: images/tech/rails.svg
+  url: https://rubyonrails.org
+  description: >-
+    The convention-driven web framework that powers most of our application
+    backends, letting us deliver full-featured, database-backed web apps fast.
 
-- category: Frontend
-  items: [React, Next.js, Hugo, HTML & CSS]
+- name: Vue
+  logo: images/tech/vue.svg
+  url: https://vuejs.org
+  description: >-
+    A modern JavaScript framework for building responsive, interactive user
+    interfaces — the dynamic front-end that sits on top of our applications.
 
-- category: Backend & APIs
-  items: [Node.js, PostgreSQL, REST, GraphQL, gRPC]
+- name: JavaScript
+  logo: images/tech/javascript.png
+  url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  description: >-
+    The language of the browser, driving interactivity on every web application
+    we build, from small enhancements to full front-end experiences.
 
-- category: Cloud & Infrastructure
-  items: [AWS, Docker, Kubernetes, Terraform]
+- name: PostgreSQL
+  logo: images/tech/postgres.svg
+  url: https://www.postgresql.org
+  description: >-
+    A powerful, reliable open-source relational database — our default choice
+    for storing and querying application data safely at scale.
 
-- category: Practices
-  items: [CI/CD, Infrastructure as Code, Automated Testing, Observability]
+- name: Linux
+  logo: images/tech/linux.png
+  url: https://www.linux.com/
+  description: >-
+    The stable, secure operating system our applications run on in production,
+    underpinning nearly all of our servers and deployments.
+
+- name: DigitalOcean
+  logo: images/tech/digitalocean.svg
+  url: https://www.digitalocean.com
+  description: >-
+    A straightforward cloud platform where we host and deploy applications,
+    giving us reliable, cost-effective infrastructure without the complexity.
+
+- name: Claude
+  logo: images/tech/claude.svg
+  url: https://www.anthropic.com/claude
+  description: >-
+    Our preferred AI model for building intelligent features — from
+    natural-language interfaces to automation and code generation — integrated
+    directly into the web applications we deliver.

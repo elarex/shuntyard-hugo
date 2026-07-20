@@ -29,18 +29,38 @@ business). Hugo + Pico CSS. Custom layouts, no external Hugo theme.
 - `markup.goldmark.renderer.unsafe = true` is on so inline HTML (e.g. the
   contact form) renders from Markdown.
 
-## Placeholders to replace with real values
+## Content source
 
-These are stand-ins the client (Jean) needs to confirm:
+Real content was migrated from the existing WordPress site at
+https://www.shuntyard.com/ (single-page site). Copy, showcase projects,
+service descriptions, and contact details are taken verbatim from there.
+Company name is **Shuntyard Technologies**; tagline **"Business Systems.
+Business Sense."**
 
-- **ABN** `00 000 000 000` and legal name `Shuntyard Pty Ltd` — `hugo.toml`
-  `[params.business]`.
-- **LinkedIn URL** — guessed as `/company/shuntyard` in `hugo.toml`
-  `[[params.socials]]`.
+- Services (4): Application Development, Mobile Development, Business
+  Intelligence, Assistance — `data/services.yaml`, icons in
+  `assets/images/services/`.
+- Showcase (3): Oome (oome.com.au), Conductor (conductor-app.com), Nomolos
+  Architecture (nomolos.co.nz) — `data/showcase.yaml`, images in
+  `assets/images/showcase/`.
+- Contact: phone (+61) 402 005 372; emails info@ / sales@ / support@; single
+  office in Newcastle, NSW (the old Cape Town branch was dropped at Jean's
+  request — no longer listed, and the contact map image was removed).
+
+## Tech logos
+
+`assets/images/tech/` logos were refreshed with current official versions from
+Wikimedia Commons (mostly SVG; JavaScript and Linux/Tux are PNG). Each tech in
+`data/technology.yaml` has a `url` to its official site. If refreshing again,
+Wikimedia's `Special:FilePath/<Filename>` redirect is the reliable fetch route
+(direct `/wikipedia/commons/x/xx/` hash paths often 404).
+
+## Placeholders still to replace
+
 - **Contact form** posts to a placeholder Formspree endpoint — the `action` URL
   in `content/contact.md` needs a real form handler.
-- **Showcase projects** in `data/showcase.yaml` are all placeholders.
-- Email is `hello@shuntyard.com` (in `hugo.toml`). Confirm this is monitored.
+- No ABN is shown (the old site didn't publish one). Add to
+  `[params.business]` + footer if wanted.
 
 ## Commands
 

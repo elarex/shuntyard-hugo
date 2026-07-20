@@ -1,27 +1,31 @@
 {{ define "main" }}
-  <section class="hero">
-    <h1>{{ .Title }}</h1>
-    <p class="tagline">{{ .Params.tagline | default site.Params.tagline }}</p>
-    <div class="hero-actions">
-      <a href="{{ "/contact" | relURL }}" role="button">Start a project</a>
-      <a href="{{ "/showcase" | relURL }}" role="button" class="secondary outline">See our work</a>
-    </div>
-  </section>
+  {{ with resources.Get "images/ribbon-banner.png" }}
+    {{ $bg := (.Resize "2000x webp q82").RelPermalink }}
+    <section class="hero hero-banner" style="{{ printf "background-image: url('%s');" $bg | safeCSS }}">
+      <div class="hero-actions">
+        <a href="{{ "/contact" | relURL }}" role="button">Get in touch with the experts today!</a>
+      </div>
+    </section>
+  {{ end }}
 
-  {{ .Content }}
+  <div class="page-body">
+    {{ .Content }}
+  </div>
 
   <section>
-    <h2>What we do</h2>
+    <h2>How can we add value today?</h2>
     <div class="card-grid">
-      {{ range first 3 hugo.Data.services }}
-        <article>
-          <h3>{{ .title }}</h3>
+      {{ range hugo.Data.services }}
+        <article class="service-card">
+          {{ $name := .title }}
+          {{ with resources.Get .icon }}
+            {{ $icon := .Resize "128x webp q90" }}
+            <img class="service-icon" src="{{ $icon.RelPermalink }}" width="{{ $icon.Width }}" height="{{ $icon.Height }}" alt="" loading="lazy">
+          {{ end }}
+          <h3>{{ $name }}</h3>
           <p>{{ .summary }}</p>
         </article>
       {{ end }}
     </div>
-    <p style="margin-top: var(--pico-spacing);">
-      <a href="{{ "/services" | relURL }}">All services &rarr;</a>
-    </p>
   </section>
 {{ end }}

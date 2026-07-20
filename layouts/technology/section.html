@@ -1,18 +1,22 @@
 {{ define "main" }}
-  <header>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.lead }}<p class="tagline">{{ . }}</p>{{ end }}
-  </header>
+  {{ partial "hero-banner.html" (dict "image" "images/screen-banner.png" "title" .Title "lead" .Params.lead) }}
 
-  {{ .Content }}
+  <div class="page-body">
+    {{ .Content }}
+  </div>
 
-  <div class="card-grid">
+  <div class="tech-details">
     {{ range hugo.Data.technology }}
-      <article>
-        <h3>{{ .category }}</h3>
-        <ul class="tech-chips">
-          {{ range .items }}<li>{{ . }}</li>{{ end }}
-        </ul>
+      {{ $name := .name }}
+      <article class="tech-detail">
+        {{ with resources.Get .logo }}
+          <img class="tech-detail-logo" src="{{ .RelPermalink }}" alt="{{ $name }} logo" loading="lazy">
+        {{ end }}
+        <div class="tech-detail-body">
+          <h3>{{ $name }}</h3>
+          <p>{{ .description }}</p>
+          {{ with .url }}<a href="{{ . }}" rel="noopener" target="_blank">Learn more &rarr;</a>{{ end }}
+        </div>
       </article>
     {{ end }}
   </div>

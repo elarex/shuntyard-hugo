@@ -1,8 +1,7 @@
 ---
 title: "Services"
-lead: "How we help teams design, build, and run great software."
+lead: "The ways we help you design, build, and grow great software."
 ---
 
-Every engagement is different, but our focus never changes: build the right
-thing, build it well, and make sure it keeps working. Below are the ways we
-most often work with clients — mix and match to suit where your project is.
+Our services are aligned to your business drivers, delivering integrated
+solutions that address your requirements effectively.

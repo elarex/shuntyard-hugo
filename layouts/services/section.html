@@ -1,15 +1,19 @@
 {{ define "main" }}
-  <header>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.lead }}<p class="tagline">{{ . }}</p>{{ end }}
-  </header>
+  {{ partial "hero-banner.html" (dict "image" "images/screen-banner.png" "title" .Title "lead" .Params.lead) }}
 
-  {{ .Content }}
+  <div class="page-body">
+    {{ .Content }}
+  </div>
 
   <div class="card-grid">
     {{ range hugo.Data.services }}
-      <article>
-        <h3>{{ .title }}</h3>
+      <article class="service-card">
+        {{ $name := .title }}
+        {{ with resources.Get .icon }}
+          {{ $icon := .Resize "128x webp q90" }}
+          <img class="service-icon" src="{{ $icon.RelPermalink }}" width="{{ $icon.Width }}" height="{{ $icon.Height }}" alt="" loading="lazy">
+        {{ end }}
+        <h3>{{ $name }}</h3>
         <p>{{ .summary }}</p>
       </article>
     {{ end }}

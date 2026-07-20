@@ -2,11 +2,14 @@
   <nav class="container">
     <a href="{{ "/" | relURL }}" class="brand" aria-label="{{ site.Title }} home">
       {{- with resources.Get "images/shuntyard-logo.png" -}}
-        {{- $logo := .Resize "196x webp q90" -}}
+        {{/* Serve at native 500px width so it stays crisp on high-DPI screens;
+             CSS scales it down to display height. */}}
+        {{- $logo := .Resize "500x webp q90" -}}
         <img src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="{{ site.Title }}">
       {{- else -}}
         <strong>{{ site.Title }}</strong>
       {{- end -}}
+      {{- with site.Params.tagline }}<span class="brand-tagline">{{ . }}</span>{{ end -}}
     </a>
 
     <button

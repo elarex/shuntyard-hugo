@@ -1,25 +1,54 @@
 # Each entry becomes a card on the Showcase page.
-# Add `url:` to link out to a live project or case study.
-- title: Project Placeholder One
-  client: Client / Industry
+- title: Oome
+  subtitle: Loan Management System
+  image: images/showcase/oome.jpg
+  url: https://www.oome.com.au
   summary: >-
-    A short highlight of what we built, the problem it solved, and the outcome
-    for the client. Replace this with a real project.
-  tags: [Web App, Cloud]
-  url: ""
+    A comprehensive solution to streamline your lending business. Oome improves
+    lending outcomes and customer experiences with intuitive loan process flow.
+  features:
+    - Automated workflow
+    - Customer self-service portal
+    - Generated PDF statements, quotes and letters
+    - On-screen analytics
+    - Comprehensive reporting
+    - 3rd party CRM integration
+    - 3rd party payment gateway integration
+    - 2-factor authentication
+    - Comprehensive event-based audit logging
+    - Role-based access
+    - Exclusive deployment with dedicated servers and database
 
-- title: Project Placeholder Two
-  client: Client / Industry
+- title: Conductor
+  subtitle: Streamlined Collaboration
+  image: images/showcase/conductor.jpg
+  url: https://conductor-app.com
   summary: >-
-    A short highlight of what we built, the problem it solved, and the outcome
-    for the client. Replace this with a real project.
-  tags: [API, Integration]
-  url: ""
+    Conductor fosters seamless collaboration on your projects. Share feedback,
+    technical information and documents in an easily accessible way. Easily loop
+    in external stakeholders and follow a workflow that suits your team. The
+    distinctive flow-driven approach enables participants to keep their finger on
+    the pulse across a range of tasks, ensuring effective delivery.
+  features:
+    - Flexible
+    - Visible
+    - Collaborative
+    - Integrated
 
-- title: Project Placeholder Three
-  client: Client / Industry
+- title: Nomolos Architecture
+  subtitle: Project Workflow
+  image: images/showcase/nomolos.jpg
+  url: https://nomolos.co.nz
   summary: >-
-    A short highlight of what we built, the problem it solved, and the outcome
-    for the client. Replace this with a real project.
-  tags: [Legacy Modernisation]
-  url: ""
+    Shuntyard is adapting Nomolos' existing operational processes to an online
+    system. This enables the team to access information more easily, and ensures
+    that progress is transparent both internally and to the client. Reducing
+    paperwork and administrative overhead allows Nomolos to improve efficiency,
+    so they can focus on amazing design and architecture.
+  features:
+    - Custom project workflow with flexible milestones
+    - Document retention and online signing
+    - Scheduling of deliverables
+    - Task-based delivery
+    - Integrated calendar and email
+    - Stakeholder management

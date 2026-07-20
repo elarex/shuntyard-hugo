@@ -1,24 +1,30 @@
 {{ define "main" }}
-  <header>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.lead }}<p class="tagline">{{ . }}</p>{{ end }}
-  </header>
+  {{ partial "hero-banner.html" (dict "image" "images/screen-banner.png" "title" .Title "lead" .Params.lead) }}
 
-  {{ .Content }}
+  <div class="page-body">
+    {{ .Content }}
+  </div>
 
-  <div class="card-grid">
+  <div class="showcase-list">
     {{ range hugo.Data.showcase }}
-      <article>
-        <h3>
-          {{ with .url }}<a href="{{ . }}" rel="noopener" target="_blank">{{ end }}{{ .title }}{{ with .url }}</a>{{ end }}
-        </h3>
-        {{ with .client }}<p><small>{{ . }}</small></p>{{ end }}
-        <p>{{ .summary }}</p>
-        {{ with .tags }}
-          <ul class="tech-chips">
-            {{ range . }}<li>{{ . }}</li>{{ end }}
-          </ul>
+      <article class="showcase-item">
+        {{ $name := .title }}
+        {{ with resources.Get .image }}
+          {{ $img := .Resize "640x webp q85" }}
+          <img class="showcase-image" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $name }}" loading="lazy">
         {{ end }}
+        <div class="showcase-body">
+          {{ with .subtitle }}<p class="showcase-subtitle">{{ . }}</p>{{ end }}
+          <p>{{ .summary }}</p>
+          {{ with .features }}
+            <ul class="tech-chips">
+              {{ range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{ end }}
+          {{ with .url }}
+            <p><a href="{{ . }}" role="button" class="secondary outline" rel="noopener" target="_blank">Visit project &rarr;</a></p>
+          {{ end }}
+        </div>
       </article>
     {{ end }}
   </div>

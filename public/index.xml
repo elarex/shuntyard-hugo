@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Shuntyard</title>
-		<link>https://shuntyard.com/</link>
-		<description>Recent content on Shuntyard</description>
+		<title>Shuntyard Technologies</title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content on Shuntyard Technologies</description>
 		<generator>Hugo</generator>
 		<language>en-au</language>
 		
 		
 		
 		
-			<atom:link href="https://shuntyard.com/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Contact</title>
-				<link>https://shuntyard.com/contact/</link>
+				<link>http://localhost:1313/contact/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://shuntyard.com/contact/</guid>
-				<description>&lt;p&gt;The quickest way to reach us is email: &lt;strong&gt;&lt;a href=&#34;mailto:hello@shuntyard.com&#34;&gt;hello@shuntyard.com&lt;/a&gt;&lt;/strong&gt;.&#xA;Prefer a form? Fill this in and we&amp;rsquo;ll get back to you within one business day.&lt;/p&gt;&#xA;&lt;form action=&#34;https://formspree.io/f/your-form-id&#34; method=&#34;POST&#34;&gt;&#xA;  &lt;div class=&#34;grid&#34;&gt;&#xA;    &lt;label&gt;&#xA;      Name&#xA;      &lt;input type=&#34;text&#34; name=&#34;name&#34; placeholder=&#34;Your name&#34; required&gt;&#xA;    &lt;/label&gt;&#xA;    &lt;label&gt;&#xA;      Email&#xA;      &lt;input type=&#34;email&#34; name=&#34;email&#34; placeholder=&#34;you@company.com&#34; required&gt;&#xA;    &lt;/label&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;label&gt;&#xA;    Message&#xA;    &lt;textarea name=&#34;message&#34; rows=&#34;6&#34; placeholder=&#34;What are you building?&#34; required&gt;&lt;/textarea&gt;&#xA;  &lt;/label&gt;&#xA;  &lt;button type=&#34;submit&#34;&gt;Send message&lt;/button&gt;&#xA;&lt;/form&gt;&#xA;&lt;p&gt;&lt;em&gt;The form posts to a placeholder endpoint — replace the &lt;code&gt;action&lt;/code&gt; URL in&#xA;&lt;code&gt;content/contact.md&lt;/code&gt; with your own form handler (e.g. Formspree) to receive&#xA;submissions.&lt;/em&gt;&lt;/p&gt;</description>
+				<guid>http://localhost:1313/contact/</guid>
+				<description>&lt;h2 id=&#34;get-in-touch&#34;&gt;Get in touch&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;New projects:&lt;/strong&gt; &lt;a href=&#34;mailto:sales@shuntyard.com&#34;&gt;sales@shuntyard.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;General enquiries:&lt;/strong&gt; &lt;a href=&#34;mailto:info@shuntyard.com&#34;&gt;info@shuntyard.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Support:&lt;/strong&gt; &lt;a href=&#34;mailto:support@shuntyard.com&#34;&gt;support@shuntyard.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Phone:&lt;/strong&gt; &lt;a href=&#34;tel:+61402005372&#34;&gt;(+61) 402 005 372&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Newcastle&lt;/strong&gt;, New South Wales, Australia&lt;/p&gt;&#xA;&lt;h2 id=&#34;send-us-a-message&#34;&gt;Send us a message&lt;/h2&gt;&#xA;&lt;form action=&#34;https://formspree.io/f/your-form-id&#34; method=&#34;POST&#34;&gt;&#xA;  &lt;div class=&#34;grid&#34;&gt;&#xA;    &lt;label&gt;&#xA;      Name&#xA;      &lt;input type=&#34;text&#34; name=&#34;name&#34; placeholder=&#34;Your name&#34; required&gt;&#xA;    &lt;/label&gt;&#xA;    &lt;label&gt;&#xA;      Email&#xA;      &lt;input type=&#34;email&#34; name=&#34;email&#34; placeholder=&#34;you@company.com&#34; required&gt;&#xA;    &lt;/label&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;label&gt;&#xA;    Message&#xA;    &lt;textarea name=&#34;message&#34; rows=&#34;6&#34; placeholder=&#34;What are you building?&#34; required&gt;&lt;/textarea&gt;&#xA;  &lt;/label&gt;&#xA;  &lt;button type=&#34;submit&#34;&gt;Send message&lt;/button&gt;&#xA;&lt;/form&gt;&#xA;&lt;p&gt;&lt;em&gt;The form posts to a placeholder endpoint. Replace the &lt;code&gt;action&lt;/code&gt; URL in&#xA;&lt;code&gt;content/contact.md&lt;/code&gt; with your own form handler (e.g. Formspree) to receive&#xA;submissions.&lt;/em&gt;&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
