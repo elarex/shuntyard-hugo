@@ -1,0 +1,35 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <strong>{{ site.Title }}</strong>
+        <p>{{ site.Params.tagline }}</p>
+      </div>
+
+      <div class="footer-business">
+        {{- with site.Params.business -}}
+          <p>
+            {{ with .legalName }}{{ . }}<br>{{ end }}
+            {{ with .abn }}ABN {{ . }}<br>{{ end }}
+            {{ with .location }}{{ . }}{{ end }}
+          </p>
+        {{- end -}}
+        <p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+      </div>
+
+      {{- with site.Params.socials -}}
+        <nav class="footer-socials" aria-label="Social links">
+          <ul>
+            {{- range . -}}
+              <li><a href="{{ .url }}" rel="me noopener" target="_blank">{{ .name }}</a></li>
+            {{- end -}}
+          </ul>
+        </nav>
+      {{- end -}}
+    </div>
+
+    <div class="footer-legal">
+      <small>&copy; {{ now.Year }} {{ with site.Params.business.legalName }}{{ . }}{{ else }}{{ site.Title }}{{ end }}. All rights reserved.</small>
+    </div>
+  </div>
+</footer>

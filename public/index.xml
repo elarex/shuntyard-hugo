@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Shuntyard</title>
+		<link>https://shuntyard.com/</link>
+		<description>Recent content on Shuntyard</description>
+		<generator>Hugo</generator>
+		<language>en-au</language>
+		
+		
+		
+		
+			<atom:link href="https://shuntyard.com/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Contact</title>
+				<link>https://shuntyard.com/contact/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://shuntyard.com/contact/</guid>
+				<description>&lt;p&gt;The quickest way to reach us is email: &lt;strong&gt;&lt;a href=&#34;mailto:hello@shuntyard.com&#34;&gt;hello@shuntyard.com&lt;/a&gt;&lt;/strong&gt;.&#xA;Prefer a form? Fill this in and we&amp;rsquo;ll get back to you within one business day.&lt;/p&gt;&#xA;&lt;form action=&#34;https://formspree.io/f/your-form-id&#34; method=&#34;POST&#34;&gt;&#xA;  &lt;div class=&#34;grid&#34;&gt;&#xA;    &lt;label&gt;&#xA;      Name&#xA;      &lt;input type=&#34;text&#34; name=&#34;name&#34; placeholder=&#34;Your name&#34; required&gt;&#xA;    &lt;/label&gt;&#xA;    &lt;label&gt;&#xA;      Email&#xA;      &lt;input type=&#34;email&#34; name=&#34;email&#34; placeholder=&#34;you@company.com&#34; required&gt;&#xA;    &lt;/label&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;label&gt;&#xA;    Message&#xA;    &lt;textarea name=&#34;message&#34; rows=&#34;6&#34; placeholder=&#34;What are you building?&#34; required&gt;&lt;/textarea&gt;&#xA;  &lt;/label&gt;&#xA;  &lt;button type=&#34;submit&#34;&gt;Send message&lt;/button&gt;&#xA;&lt;/form&gt;&#xA;&lt;p&gt;&lt;em&gt;The form posts to a placeholder endpoint — replace the &lt;code&gt;action&lt;/code&gt; URL in&#xA;&lt;code&gt;content/contact.md&lt;/code&gt; with your own form handler (e.g. Formspree) to receive&#xA;submissions.&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

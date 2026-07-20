@@ -1,0 +1,33 @@
+<header class="site-header">
+  <nav class="container">
+    <a href="{{ "/" | relURL }}" class="brand" aria-label="{{ site.Title }} home">
+      {{- with resources.Get "images/shuntyard-logo.png" -}}
+        {{- $logo := .Resize "196x webp q90" -}}
+        <img src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="{{ site.Title }}">
+      {{- else -}}
+        <strong>{{ site.Title }}</strong>
+      {{- end -}}
+    </a>
+
+    <button
+      class="nav-toggle"
+      aria-label="Toggle navigation menu"
+      aria-controls="primary-nav"
+      aria-expanded="false">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <ul id="primary-nav" class="nav-links">
+      {{- range site.Menus.main -}}
+        {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) -}}
+        <li>
+          <a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+        </li>
+      {{- end -}}
+    </ul>
+  </nav>
+</header>
+
+<script src="{{ (resources.Get "js/nav.js" | resources.Minify | resources.Fingerprint).RelPermalink }}" defer></script>

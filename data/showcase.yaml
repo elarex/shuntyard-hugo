@@ -1,0 +1,25 @@
+# Each entry becomes a card on the Showcase page.
+# Add `url:` to link out to a live project or case study.
+- title: Project Placeholder One
+  client: Client / Industry
+  summary: >-
+    A short highlight of what we built, the problem it solved, and the outcome
+    for the client. Replace this with a real project.
+  tags: [Web App, Cloud]
+  url: ""
+
+- title: Project Placeholder Two
+  client: Client / Industry
+  summary: >-
+    A short highlight of what we built, the problem it solved, and the outcome
+    for the client. Replace this with a real project.
+  tags: [API, Integration]
+  url: ""
+
+- title: Project Placeholder Three
+  client: Client / Industry
+  summary: >-
+    A short highlight of what we built, the problem it solved, and the outcome
+    for the client. Replace this with a real project.
+  tags: [Legacy Modernisation]
+  url: ""

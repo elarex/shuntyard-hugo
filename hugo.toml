@@ -1,0 +1,49 @@
+baseURL = 'https://shuntyard.com/'
+locale = 'en-au'
+title = 'Shuntyard'
+
+# Pico is fairly compact; keep summaries readable.
+summaryLength = 30
+
+# No taxonomies on this site yet.
+disableKinds = ['taxonomy', 'term']
+[taxonomies]
+
+[params]
+  description = 'Shuntyard is a software development company that designs, builds, and ships reliable software.'
+  tagline = 'Software built to last.'
+  email = 'hello@shuntyard.com'
+
+  # Business details shown in the footer.
+  [params.business]
+    legalName = 'Shuntyard Pty Ltd'
+    abn = '00 000 000 000'
+    location = 'Australia'
+
+  # Social links. Add more entries as they come online.
+  [[params.socials]]
+    name = 'LinkedIn'
+    url = 'https://www.linkedin.com/company/shuntyard'
+
+[menu]
+  [[menu.main]]
+    name = 'Services'
+    pageRef = '/services'
+    weight = 10
+  [[menu.main]]
+    name = 'Showcase'
+    pageRef = '/showcase'
+    weight = 20
+  [[menu.main]]
+    name = 'Technology'
+    pageRef = '/technology'
+    weight = 30
+  [[menu.main]]
+    name = 'Contact'
+    pageRef = '/contact'
+    weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

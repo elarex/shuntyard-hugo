@@ -1,0 +1,30 @@
+# Each entry becomes a card on the Services page.
+- title: Custom Software Development
+  summary: >-
+    End-to-end design and delivery of web and backend systems tailored to how
+    your business actually works — not an off-the-shelf compromise.
+
+- title: Cloud & Platform Engineering
+  summary: >-
+    Infrastructure as code, CI/CD pipelines, and observability so your software
+    ships safely and runs reliably at scale.
+
+- title: API & Systems Integration
+  summary: >-
+    Connecting the tools, data, and third-party services your business depends
+    on into one coherent, well-documented system.
+
+- title: Legacy Modernisation
+  summary: >-
+    Untangling and incrementally rebuilding ageing systems without a risky
+    big-bang rewrite — keeping the lights on the whole way.
+
+- title: Technical Consulting & Architecture
+  summary: >-
+    Pragmatic architecture reviews, technology selection, and hands-on guidance
+    to help your team make sound decisions early.
+
+- title: Ongoing Support & Maintenance
+  summary: >-
+    Long-term partnership to keep software secure, up to date, and evolving with
+    your business well after launch.

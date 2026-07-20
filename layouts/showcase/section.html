@@ -1,0 +1,25 @@
+{{ define "main" }}
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="tagline">{{ . }}</p>{{ end }}
+  </header>
+
+  {{ .Content }}
+
+  <div class="card-grid">
+    {{ range hugo.Data.showcase }}
+      <article>
+        <h3>
+          {{ with .url }}<a href="{{ . }}" rel="noopener" target="_blank">{{ end }}{{ .title }}{{ with .url }}</a>{{ end }}
+        </h3>
+        {{ with .client }}<p><small>{{ . }}</small></p>{{ end }}
+        <p>{{ .summary }}</p>
+        {{ with .tags }}
+          <ul class="tech-chips">
+            {{ range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+{{ end }}

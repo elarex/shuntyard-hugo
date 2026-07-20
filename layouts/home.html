@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <section class="hero">
+    <h1>{{ .Title }}</h1>
+    <p class="tagline">{{ .Params.tagline | default site.Params.tagline }}</p>
+    <div class="hero-actions">
+      <a href="{{ "/contact" | relURL }}" role="button">Start a project</a>
+      <a href="{{ "/showcase" | relURL }}" role="button" class="secondary outline">See our work</a>
+    </div>
+  </section>
+
+  {{ .Content }}
+
+  <section>
+    <h2>What we do</h2>
+    <div class="card-grid">
+      {{ range first 3 hugo.Data.services }}
+        <article>
+          <h3>{{ .title }}</h3>
+          <p>{{ .summary }}</p>
+        </article>
+      {{ end }}
+    </div>
+    <p style="margin-top: var(--pico-spacing);">
+      <a href="{{ "/services" | relURL }}">All services &rarr;</a>
+    </p>
+  </section>
+{{ end }}

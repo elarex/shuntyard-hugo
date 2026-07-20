@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{- $title := .Title -}}
+{{- $siteTitle := site.Title -}}
+<title>{{ if .IsHome }}{{ $siteTitle }} — {{ site.Params.tagline }}{{ else }}{{ $title }} — {{ $siteTitle }}{{ end }}</title>
+
+{{- $desc := or .Description .Summary site.Params.description -}}
+<meta name="description" content="{{ $desc | plainify | truncate 160 }}">
+
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Pico base + our overrides, bundled and fingerprinted */}}
+{{- $pico := resources.Get "css/pico.min.css" -}}
+{{- $custom := resources.Get "css/custom.css" -}}
+{{- $css := slice $pico $custom | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

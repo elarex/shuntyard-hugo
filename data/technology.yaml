@@ -1,0 +1,15 @@
+# Grouped technologies shown on the Technology page.
+- category: Languages
+  items: [Go, TypeScript, Python, SQL]
+
+- category: Frontend
+  items: [React, Next.js, Hugo, HTML & CSS]
+
+- category: Backend & APIs
+  items: [Node.js, PostgreSQL, REST, GraphQL, gRPC]
+
+- category: Cloud & Infrastructure
+  items: [AWS, Docker, Kubernetes, Terraform]
+
+- category: Practices
+  items: [CI/CD, Infrastructure as Code, Automated Testing, Observability]

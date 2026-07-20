@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="tagline">{{ . }}</p>{{ end }}
+  </header>
+
+  {{ .Content }}
+
+  <div class="card-grid">
+    {{ range hugo.Data.technology }}
+      <article>
+        <h3>{{ .category }}</h3>
+        <ul class="tech-chips">
+          {{ range .items }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </article>
+    {{ end }}
+  </div>
+{{ end }}
