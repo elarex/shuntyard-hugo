@@ -3,7 +3,7 @@ title: "Pricing"
 lead: "Simple, transparent pricing for expert software development."
 ---
 
-We keep pricing straightforward: one clear day rate, no hidden extras. Tell us
+We keep pricing straightforward: one clear daily rate, no hidden extras. Tell us
 about your project and we'll help you build affordable software that delivers
 real value for your business.
 
