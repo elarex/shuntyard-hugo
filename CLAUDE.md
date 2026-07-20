@@ -61,12 +61,18 @@ Wikimedia Commons (mostly SVG; JavaScript and Linux/Tux are PNG). Each tech in
 Wikimedia's `Special:FilePath/<Filename>` redirect is the reliable fetch route
 (direct `/wikipedia/commons/x/xx/` hash paths often 404).
 
-## Placeholders still to replace
+## Contact page
 
-- **Contact form** posts to a placeholder Formspree endpoint, the `action` URL
-  in `content/contact.md` needs a real form handler.
-- No ABN is shown (the old site didn't publish one). Add to
-  `[params.business]` + footer if wanted.
+No contact form (Jean's preference: nobody uses them). The page uses direct
+`mailto:` and `tel:` links plus a "What to expect" process list. If a form is
+ever wanted, remember `unsafe = true` is on so inline HTML renders from Markdown.
+
+## Notes
+
+- ACN 669 558 427 shown in the footer copyright (`[params.business].acn`).
+  Company legal name is Shuntyard Technologies Pty Ltd.
+- Day rate is $950 ex GST (`content/pricing.md`); NSW rate benchmarks and
+  sources are recorded in `README.md`.
 
 ## Commands
 
