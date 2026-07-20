@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Shuntyard — custom styles layered on top of Pico
+   Shuntyard, custom styles layered on top of Pico
    ========================================================================== */
 
 :root {
@@ -80,7 +80,7 @@
   color: var(--pico-primary);
 }
 
-/* Hamburger button — hidden on desktop */
+/* Hamburger button, hidden on desktop */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -380,6 +380,7 @@ main ul:not([class]) li {
 .tech-detail-body h3 {
   margin-top: 0;
   margin-bottom: 0.35rem;
+  font-size: 1.05rem;
 }
 
 .tech-detail-body p {
@@ -489,7 +490,7 @@ main ul:not([class]) li {
   color: var(--sy-footer-text);
 }
 
-/* Single column: phone, address, LinkedIn — each with a leading icon. */
+/* Single column: phone, address, LinkedIn, each with a leading icon. */
 .footer-connect {
   display: flex;
   flex-direction: column;

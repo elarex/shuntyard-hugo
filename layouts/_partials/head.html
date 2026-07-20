@@ -3,7 +3,7 @@
 
 {{- $title := .Title -}}
 {{- $siteTitle := site.Title -}}
-<title>{{ if .IsHome }}{{ $siteTitle }} — {{ site.Params.tagline }}{{ else }}{{ $title }} — {{ $siteTitle }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ $siteTitle }} | {{ site.Params.tagline }}{{ else }}{{ $title }} | {{ $siteTitle }}{{ end }}</title>
 
 {{- $desc := or .Description .Summary site.Params.description -}}
 <meta name="description" content="{{ $desc | plainify | truncate 160 }}">

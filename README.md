@@ -7,8 +7,8 @@ technology we prefer, and how to get in touch.
 
 ## Tools
 
-- **[Hugo](https://gohugo.io/)** (extended, v0.164+) — static site generator
-- **[Pico CSS](https://picocss.com/)** (v2) — minimal, classless-friendly CSS
+- **[Hugo](https://gohugo.io/)** (extended, v0.164+), static site generator
+- **[Pico CSS](https://picocss.com/)** (v2), minimal, classless-friendly CSS
   framework, vendored at `assets/css/pico.min.css`
 - Vanilla JavaScript for the responsive navigation toggle
 - Hugo Pipes for bundling, minifying, and fingerprinting CSS/JS assets

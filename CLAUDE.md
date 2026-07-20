@@ -1,7 +1,13 @@
 # CLAUDE.md
 
-Working notes for this project — context, conventions, and things to circle back
+Working notes for this project: context, conventions, and things to circle back
 to between sessions.
+
+## Writing rules
+
+- **Never use em-dashes (—) anywhere, ever.** Not in site copy, content, data,
+  config, comments, commit messages, or these notes. Rewrite with commas,
+  colons, full stops, or restructured sentences instead. (Client preference.)
 
 ## What this is
 
@@ -25,7 +31,7 @@ business). Hugo + Pico CSS. Custom layouts, no external Hugo theme.
   1024px** (`assets/js/nav.js` + media queries in `custom.css`). The 1024px
   breakpoint is intentional (client request).
 - **Locale** is `en-au` (set via `locale`, not the deprecated `languageCode`).
-- Taxonomies are disabled (`disableKinds`) — no tags/categories on this site.
+- Taxonomies are disabled (`disableKinds`), no tags/categories on this site.
 - `markup.goldmark.renderer.unsafe = true` is on so inline HTML (e.g. the
   contact form) renders from Markdown.
 
@@ -38,14 +44,14 @@ Company name is **Shuntyard Technologies**; tagline **"Business Systems.
 Business Sense."**
 
 - Services (4): Application Development, Mobile Development, Business
-  Intelligence, Assistance — `data/services.yaml`, icons in
+  Intelligence, Assistance, `data/services.yaml`, icons in
   `assets/images/services/`.
 - Showcase (3): Oome (oome.com.au), Conductor (conductor-app.com), Nomolos
-  Architecture (nomolos.co.nz) — `data/showcase.yaml`, images in
+  Architecture (nomolos.co.nz), `data/showcase.yaml`, images in
   `assets/images/showcase/`.
 - Contact: phone (+61) 402 005 372; emails info@ / sales@ / support@; single
   office in Newcastle, NSW (the old Cape Town branch was dropped at Jean's
-  request — no longer listed, and the contact map image was removed).
+  request, no longer listed, and the contact map image was removed).
 
 ## Tech logos
 
@@ -57,7 +63,7 @@ Wikimedia's `Special:FilePath/<Filename>` redirect is the reliable fetch route
 
 ## Placeholders still to replace
 
-- **Contact form** posts to a placeholder Formspree endpoint — the `action` URL
+- **Contact form** posts to a placeholder Formspree endpoint, the `action` URL
   in `content/contact.md` needs a real form handler.
 - No ABN is shown (the old site didn't publish one). Add to
   `[params.business]` + footer if wanted.
@@ -73,7 +79,7 @@ hugo --gc         # production build; check output for WARN/deprecated lines
 
 - Only social channel is LinkedIn for now; `[[params.socials]]` is a list so
   more can be appended.
-- No About page yet — not requested, but a natural addition.
+- No About page yet, not requested, but a natural addition.
 - Consider individual showcase detail pages (leaf bundles) if projects need
   more than a card; would move from `data/showcase.yaml` to
   `content/showcase/<project>/`.

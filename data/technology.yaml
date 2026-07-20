@@ -12,7 +12,7 @@
   url: https://vuejs.org
   description: >-
     A modern JavaScript framework for building responsive, interactive user
-    interfaces — the dynamic front-end that sits on top of our applications.
+    interfaces, the dynamic front-end that sits on top of our applications.
 
 - name: JavaScript
   logo: images/tech/javascript.png
@@ -25,7 +25,7 @@
   logo: images/tech/postgres.svg
   url: https://www.postgresql.org
   description: >-
-    A powerful, reliable open-source relational database — our default choice
+    A powerful, reliable open-source relational database, and our default choice
     for storing and querying application data safely at scale.
 
 - name: Linux
@@ -46,6 +46,6 @@
   logo: images/tech/claude.svg
   url: https://www.anthropic.com/claude
   description: >-
-    Our preferred AI model for building intelligent features — from
-    natural-language interfaces to automation and code generation — integrated
+    Our preferred AI model for building intelligent features, from
+    natural-language interfaces to automation and code generation, integrated
     directly into the web applications we deliver.

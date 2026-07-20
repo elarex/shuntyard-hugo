@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://shuntyard.com/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/services/</loc>
+    <loc>https://shuntyard.com/services/</loc>
   </url><url>
-    <loc>http://localhost:1313/showcase/</loc>
+    <loc>https://shuntyard.com/showcase/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://shuntyard.com/</loc>
   </url><url>
-    <loc>http://localhost:1313/technology/</loc>
+    <loc>https://shuntyard.com/technology/</loc>
   </url>
 </urlset>
