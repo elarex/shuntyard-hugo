@@ -17,9 +17,12 @@
           {{ with .subtitle }}<p class="showcase-subtitle">{{ . }}</p>{{ end }}
           <p>{{ .summary }}</p>
           {{ with .features }}
-            <ul class="tech-chips">
-              {{ range . }}<li>{{ . }}</li>{{ end }}
-            </ul>
+            <div class="showcase-features-wrap">
+              <ul class="showcase-features">
+                {{ range . }}<li>{{ . }}</li>{{ end }}
+              </ul>
+              <button type="button" class="showcase-features-more" aria-expanded="false">See all features</button>
+            </div>
           {{ end }}
           {{ with .url }}
             <p><a href="{{ . }}" role="button" class="secondary outline" rel="noopener" target="_blank">Visit project &rarr;</a></p>
@@ -28,4 +31,17 @@
       </article>
     {{ end }}
   </div>
+
+  <script>
+    (function () {
+      document.querySelectorAll(".showcase-features-more").forEach(function (btn) {
+        var list = btn.previousElementSibling;
+        btn.addEventListener("click", function () {
+          var expanded = list.classList.toggle("expanded");
+          btn.textContent = expanded ? "See fewer features" : "See all features";
+          btn.setAttribute("aria-expanded", String(expanded));
+        });
+      });
+    })();
+  </script>
 {{ end }}

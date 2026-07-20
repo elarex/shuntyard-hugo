@@ -270,6 +270,37 @@ main > .hero-banner:first-child {
   margin-block: clamp(2rem, 5vw, 3.5rem);
 }
 
+/* Call-to-action panel (e.g. pricing page). */
+.cta-panel {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  padding: clamp(1.75rem, 5vw, 3rem);
+  text-align: center;
+  background: #1d3557;
+  color: #fff;
+  border-radius: var(--pico-border-radius);
+}
+
+.cta-panel p {
+  margin: 0 0 1.25rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.cta-panel a[role="button"] {
+  display: inline-block;
+  width: auto;
+  padding: 0.9rem 1.9rem;
+  font-weight: 600;
+  background: #fff;
+  color: #1d3557;
+  border: 2px solid #fff;
+}
+
+.cta-panel a[role="button"]:hover {
+  background: transparent;
+  color: #fff;
+}
+
 /* Plain markdown lists: no bullets, no indent. Decorative lists carry their
    own classes and are unaffected. */
 main ul:not([class]) {
@@ -279,6 +310,17 @@ main ul:not([class]) {
 
 main ul:not([class]) li {
   margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+/* Pico sets `ul li { list-style: square }` directly on the li, which overrides
+   list-style:none set on the ul. Clear it on our decorative lists too. */
+.showcase-features li,
+.tech-logos li,
+.nav-links li,
+.footer-connect li,
+.footer-socials li {
+  list-style: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -395,10 +437,22 @@ main ul:not([class]) li {
 
 .showcase-item {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
+  grid-template-columns: 240px minmax(0, 1fr);
   gap: calc(var(--pico-spacing) * 1.5);
-  align-items: start;
+  align-items: stretch;
   margin: 0;
+}
+
+/* Body fills the row height so the CTA can sit at the bottom-right. */
+.showcase-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase-body > p:last-child:has(a[role="button"]) {
+  margin-top: auto;
+  margin-bottom: 0;
+  text-align: right;
 }
 
 @media (max-width: 767.98px) {
@@ -411,8 +465,8 @@ main ul:not([class]) li {
    (source images are left untouched). */
 .showcase-image {
   width: 100%;
-  max-width: 180px;
-  height: 110px;
+  max-width: 240px;
+  height: 150px;
   object-fit: contain;
   border-radius: var(--pico-border-radius);
 }
@@ -428,22 +482,65 @@ main ul:not([class]) li {
   font-weight: 600;
 }
 
-/* Compact chips for the technology page */
-.tech-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
+/* Feature checklist for showcase cards: 2 columns on wide screens. */
+.showcase-features {
   list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem 1.25rem;
 }
 
-.tech-chips li {
-  margin: 0;
-  padding: 0.35rem 0.75rem;
-  background: var(--pico-card-background-color);
-  border: 1px solid var(--pico-muted-border-color);
-  border-radius: var(--pico-border-radius);
+/* "See more" toggle: only used on small screens (see media query below). */
+.showcase-features-more {
+  display: none;
+  width: auto;
+  margin: 0 0 1rem;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--pico-primary);
   font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* On small screens: single column, collapsed to the first 4 items with a
+   "see more" link that expands the full list. */
+@media (max-width: 767.98px) {
+  .showcase-features {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-features:not(.expanded) li:nth-child(n + 5) {
+    display: none;
+  }
+
+  /* Show the toggle only when there are more than 4 features to reveal. */
+  .showcase-features-wrap:has(.showcase-features li:nth-child(5)) .showcase-features-more {
+    display: inline-block;
+  }
+}
+
+.showcase-features li {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding-left: 1.4rem;
+  font-size: 0.9rem;
+}
+
+.showcase-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 0.5rem;
+  height: 0.28rem;
+  border-left: 2px solid var(--pico-primary);
+  border-bottom: 2px solid var(--pico-primary);
+  transform: rotate(-45deg);
 }
 
 /* --------------------------------------------------------------------------

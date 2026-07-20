@@ -43,7 +43,7 @@
     </div>
 
     <div class="footer-legal">
-      <small>&copy; {{ now.Year }} {{ with site.Params.business.legalName }}{{ . }}{{ else }}{{ site.Title }}{{ end }}. All rights reserved.</small>
+      <small>&copy; {{ now.Year }} {{ with site.Params.business.legalName }}{{ . }}{{ else }}{{ site.Title }}{{ end }}{{ with site.Params.business.acn }} (ACN {{ . }}){{ end }}. All rights reserved.</small>
     </div>
   </div>
 </footer>

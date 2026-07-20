@@ -1,7 +1,7 @@
 # Each entry becomes a card on the Showcase page.
 - title: Oome
   subtitle: Loan Management System
-  image: images/showcase/oome.jpg
+  image: images/showcase/oome.png
   url: https://www.oome.com.au
   summary: >-
     A comprehensive solution to streamline your lending business. Oome improves
@@ -17,7 +17,8 @@
     - 2-factor authentication
     - Comprehensive event-based audit logging
     - Role-based access
-    - Exclusive deployment with dedicated servers and database
+    - Exclusive deployment with dedicated servers
+    - Dedicated database
 
 - title: Conductor
   subtitle: Streamlined Collaboration
