@@ -3,12 +3,16 @@
 
 {{- $title := .Title -}}
 {{- $siteTitle := site.Title -}}
-<title>{{ if .IsHome }}{{ $siteTitle }} | {{ site.Params.tagline }}{{ else }}{{ $title }} | {{ $siteTitle }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ $siteTitle }}{{ else }}{{ $title }} | {{ $siteTitle }}{{ end }}</title>
 
 {{- $desc := or .Description .Summary site.Params.description -}}
 <meta name="description" content="{{ $desc | plainify | truncate 160 }}">
 
 <link rel="canonical" href="{{ .Permalink }}">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
 {{/* Pico base + our overrides, bundled and fingerprinted */}}
 {{- $pico := resources.Get "css/pico.min.css" -}}
