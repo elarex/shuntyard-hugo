@@ -66,18 +66,10 @@ Wikimedia's `Special:FilePath/<Filename>` redirect is the reliable fetch route
 
 ## Favicons
 
-Favicons generated (SVG + PNG variants) and stored in `assets/images/` and
-`static/`, but **not yet wired into head.html**. To complete: add these lines
-to `layouts/_partials/head.html` after the canonical link:
-
-```html
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-```
-
-(SVG is served from assets as favicon.svg; 32px and 180px PNGs are in assets;
-favicon.ico is in static/ for legacy browser fallback.)
+Favicons generated and deployed: SVG, PNG-32, PNG-180 (apple-touch-icon), and
+ICO (legacy). All stored in `static/` for direct serving at root. Wired into
+`layouts/_partials/head.html` with proper link rel types and MIME types. Navy
+rounded square with white "S" monogram, matches brand color (#1d3557).
 
 ## Footer
 
@@ -114,10 +106,6 @@ hugo server -D    # dev (Jean typically runs this themselves)
 hugo --gc         # production build; check output for WARN/deprecated lines
 ```
 
-## Pending tasks
-
-- **Favicon wiring:** Favicon files exist but not linked in head.html. See
-  "Favicons" section above for the exact lines to add.
 
 ## Open questions / future
 
